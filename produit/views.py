@@ -24,7 +24,7 @@ def index(request):
     
 def details(request, myid):
     produit_object = Produit.objects.get(id=myid)
-    return render(request, 'details.html', {'produit':produit_object})
+    return render(request, 'details.html', {'produit_object':produit_object})
 
 def checkout(request):
     if request.method == 'POST':
